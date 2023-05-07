@@ -1,3 +1,47 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
+
+
+.hero{
+
+    background-color:$global-color;
+    color:$primary-cta-color;
+    font-family:'Titillium Web';
+    font-weight:600;
+    font-size:40px;
+}
+
+
+.product{
+
+    &__description{
+
+    }
+
+    &__description--bold{
+        font-weight:600;
+    }
+
+}
+
+.benefits {
+
+    &__subheader{
+
+    }
+
+    &__list{
+
+
+    }
+}
+
+
+.salespitch{
+    font-weight:600;
+}
+.button__quote{
+    background-color: $primary-cta-color;
+    color:$global-color;
+}
