@@ -1,0 +1,33 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.rent{
+    @include desktop{
+        margin-top:2rem;
+        margin-left:5rem;
+        margin-right:5rem;
+        
+    }
+
+    &__description{
+        font-family:'DM Sans';
+        font-weight:400;
+        padding:1rem;
+        padding-left:0rem;
+    }
+}
+.button__submit{
+    background-color: $primary-cta-color;
+    color:$global-color;
+    font-family:'DM Sans';
+    font-weight:600;
+    font-size:1.25rem;
+    border:none;
+    box-shadow:none;
+    border-radius:0.5rem;
+    width:15rem;
+    padding:0.5rem;
+    margin:auto;
+    margin-bottom:5rem;  
+}

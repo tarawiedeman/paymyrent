@@ -1,0 +1,111 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+
+.hero{
+
+    background-color:$global-color;
+    color:$primary-cta-color;
+    font-family:'DM Sans';
+    font-weight:600;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+    @include desktop{
+    font-size:2.5rem;
+    height: 15rem;
+    }
+}
+
+
+.product{
+
+    @include desktop{
+        margin-left:8rem;
+        margin-right:8rem;
+    }
+
+    &__description{
+        text-align:center;
+
+    @include desktop{
+        padding-bottom:1rem;
+        margin-left:6rem;
+        margin-right:6rem;
+        font-size:32px;
+
+    }
+
+    }
+
+    &__description--bold{
+        font-weight:600;
+    }
+
+}
+
+.benefits {
+    
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+
+    @include desktop{
+        margin-top:4rem;
+        margin-bottom:4rem;
+        margin-left:1rem;
+        margin-right:1rem;
+        gap:10rem;
+    }
+
+    &__container{
+        border:1px black solid;
+        padding:1rem;
+        padding-left:2rem;
+        margin:0.5rem;
+    }
+
+    &__subheader{
+        text-align:center;
+    }
+
+    &__list{
+        text-align:left;
+        padding-top:1rem;
+
+    }
+}
+
+
+.sales{
+
+    display:flex;
+    flex-direction:column;
+    width:350px;
+    flex-wrap: wrap;
+    margin:auto;
+    
+
+    &__description{
+        font-weight:600;
+        text-align:center;
+        margin-bottom:1rem;
+    }
+}
+.button__quote{
+    background-color: $primary-cta-color;
+    color:$global-color;
+    font-family:'DM Sans';
+    font-weight:600;
+    font-size:1.25rem;
+    border:none;
+    box-shadow:none;
+    border-radius:0.5rem;
+    width:15rem;
+    padding:0.5rem;
+    margin:auto;
+    margin-bottom:5rem;
+}
