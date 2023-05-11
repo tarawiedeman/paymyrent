@@ -2,7 +2,7 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 
-.rent{
+.dashboard{
     @include desktop{
         margin-top:2rem;
         margin-left:5rem;
@@ -10,7 +10,7 @@
         
     }
 
-    &__description{
+    &__description--rent{
         font-family:'DM Sans';
         font-weight:400;
         padding:1rem;

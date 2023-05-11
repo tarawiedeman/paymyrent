@@ -11,11 +11,15 @@ function Header() {
   return (
     <header className="header">
         <Link to="/"><img src={logo} alt="logo" className="header__logo"/></Link>
-        <Link to="/login"><div className="header__login">
+        <div className="header__login">
           <img className="header__icon" src={login} alt="login"></img>
-          <h2 className="header__login--text">Login</h2>
+          <div className="header__container">
+          <Link to="/login"><h2 className="header__login--text">Login</h2></Link>
+          <div className="header__login--text"> / </div>
+          <Link to="/logout"><h2 className="header__login--text">Logout</h2></Link>
+          </div>
         </div>
-        </Link>
+      
       
     </header>
   );

@@ -4,8 +4,10 @@ import Header from "./components/Header/Header";
 // import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
+import Logout from "./pages/Logout/Logout";
 import CreateAccount from "./pages/CreateAccount/CreateAccount";
 import Payment from "./pages/Payment/Payment";
+
 
 
 // const baseUrl = "http://localhost:5000";
@@ -17,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="login" element={<Login />} />
+        <Route path="logout" element={<Logout />} />
         <Route path="createaccount" element={<CreateAccount />} />
         <Route path="payment/:tenantid" element={<Payment />} />
       </Routes>

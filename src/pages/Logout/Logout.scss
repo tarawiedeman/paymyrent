@@ -1,0 +1,49 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.logout{
+    display:flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    font-family:'DM Sans';
+
+    @include desktop{
+        margin-top:5rem;
+        margin-bottom:5rem;
+        margin-left:30rem;
+        margin-right:30rem;
+        
+    }
+
+    &__description{
+        font-weight:400;
+        font-size:1.5rem;
+        margin:1rem;
+    }
+
+    &__description--bold{
+        font-weight:600;
+        font-size:1.5rem;
+    }
+}
+
+.button__logout{
+    background-color: $primary-cta-color;
+    color:$global-color;
+    font-family:'DM Sans';
+    font-weight:600;
+    font-size:1.25rem;
+    border:none;
+    box-shadow:none;
+    border-radius:0.5rem;
+
+    @include desktop{
+    width:6rem;
+    padding:0.25rem;
+    margin:auto;
+    margin-top:2rem;
+    margin-bottom:2rem;
+    }
+
+}

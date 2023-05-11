@@ -30,6 +30,11 @@
         text-align:center;
     }
 
+    &__container{
+        display:flex;
+        flex-direction: row;
+    }
+
     &__login--text{
         font-weight:600;
         color:$global-color;
