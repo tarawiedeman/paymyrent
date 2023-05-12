@@ -22,8 +22,8 @@ function Login() {
             setError('');
             const user = jwt(response.data.token);
             console.log(user);
-            const {id}=user;
-            navigate(`/payment/${id}`)
+            const {email}=user;
+            navigate(`/payment/${email}`)
         })
         .catch((error) => {
             setError(error.response.data);

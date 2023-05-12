@@ -7,7 +7,7 @@
 
     background-color:$header-color;
     font-family:'DM Sans';
-    padding:0.25rem;
+    padding:0.15rem;
     display:flex;
     flex-direction: row;
     position:relative;
@@ -15,7 +15,7 @@
     
     &__logo{
         width: 100px;
-        height: 75px;
+        height: 70px;
     }
 
     &__icon{
