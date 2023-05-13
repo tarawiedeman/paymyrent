@@ -1,7 +1,7 @@
 import './App.scss';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Header from "./components/Header/Header";
-// import Footer from "./components/Footer/Footer";
+import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Logout from "./pages/Logout/Logout";
@@ -23,7 +23,7 @@ function App() {
         <Route path="createaccount" element={<CreateAccount />} />
         <Route path="payment/:tenantemail" element={<Payment />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </BrowserRouter>
   );
 }

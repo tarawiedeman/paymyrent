@@ -59,15 +59,18 @@ function Payment () {
     if(!currentTenant) {
 
       return(
-        <section className="dashboard">
+        <section className="nodashboard">
           <p>You are not authorized to see this page.</p>
+          <p>
+            <Link to="/">Back</Link>
+          </p>
         </section>
       )
     }
     
     if(failedAuth) {
       return(
-        <section className="dashboard">
+        <section className="nodashboard">
           <p>You must be logged in to see this page.</p>
           <p>
             <Link to="/login">Login</Link>
@@ -78,7 +81,7 @@ function Payment () {
 
     if(user === null){
       return(
-        <section className="dashboard">
+        <section className="nodashboard">
           <p>Loading...</p>
         </section>
       )
