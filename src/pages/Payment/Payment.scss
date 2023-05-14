@@ -7,17 +7,24 @@
     font-family:'DM Sans';
     font-weight:400;
     display:flex;
-    flex-direction:row;
+    flex-direction:column;
+    margin-left:10%;
+    margin-right:10%;
 
-    @include desktop{
-        display:flex;
+    @include tablet{
+        flex-direction:row;
         margin-top:2rem;
         gap:3rem;
         margin-left:10%;
-        margin-right:10%;
-       
-
+        margin-right:10%;       
         
+    }
+    @include desktop{
+        flex-direction:row;
+        margin-top:2rem;
+        gap:3rem;
+        margin-left:10%;
+        margin-right:10%;       
     }
 }
 
@@ -28,29 +35,47 @@
     flex-direction: column;
     text-align:center;
     margin-top:2rem;
-
+    
 }
 .profile {
     display:flex;
     flex-direction:row;
     font-family:'DM Sans';
+    margin-top:5rem;
+    margin-left:1rem;
+    
+    @include tablet{
+        margin-top:7rem;
+        margin-left:5rem;
+    }
+
+    @include desktop{
+    margin-top:6rem;
     margin-left:10rem;
-    margin-top:4rem;
+    }
     
     &__container{
         flex-direction:column;
     }
     &__name{
-
-    @include desktop{
-        
-        font-size:32px;
         font-weight:600;
+        font-size:22px;
+
+    @include tablet{
+        font-size:28px;
+    }
+    @include desktop{
+        font-size:32px;
     }
     }
 
     &__address{
     font-family:'DM Sans';
+    font-size:14px;
+
+    @include tablet{
+        font-size:16px;
+    }
 
     @include desktop{
         font-size:18px;
@@ -59,12 +84,25 @@
     }
 
     &__image{
-        margin-top:1rem;
-        margin-right:2rem;
-        width:45px;
-        height:48px;
+        margin-top:0.5rem;
+        margin-right:1rem;
         border:1.5px black solid;
         border-radius:100px;
+        width:25px; 
+        height: 28px;
+
+        @include tablet{
+            margin-top:1rem;
+            margin-right:2rem;
+            width:35px; 
+            height: 38px;
+        }
+        @include desktop{
+            margin-top:1rem;
+            margin-right:2rem;
+            width:45px;
+            height:48px;
+        }
 
     }
 }
@@ -76,6 +114,20 @@
     display:flex;
     flex-direction:column;
     align-items:center;
+    margin-top:0.25rem;
+    width:18rem;
+    height:15rem;
+    margin-left:0.5rem;
+    margin-right:0.5rem;
+    
+
+    @include tablet{
+        margin-top:1rem;
+        width:40rem;
+        height:20rem;
+        margin-left:1rem;
+        margin-right:1rem;
+    }
 
     @include desktop{
         margin-top:2rem;
@@ -85,10 +137,24 @@
     }
 
     &__icon{
+        width:2rem;
+        height:1.75rem;
+        padding-top:0.5rem;
+        padding-right:0.5rem; 
+
+        @include tablet{
+            width:2rem;
+            height:1.75rem;
+            padding-top:0.2rem;
+            padding-right:0.5rem;  
+        }
+        @include desktop{
         width:3rem;
         height:2.75rem;
         padding-top:0.5rem;
         padding-right:0.5rem;
+        margin-bottom:0.25rem;
+        }
         
     }
 
@@ -103,15 +169,23 @@
     &__container--column{
         display:flex;
         flex-direction: column;
-        @include desktop{
-            margin-top:1rem;
-            
+        margin-top:1rem;
+        gap:1rem;
+
+        @include tablet{
+            gap:2.1rem;
         }
+
+        @include desktop{
+            gap:0rem;
+        }
+        
     }
 
     &__container--row{
         display:flex;
         flex-direction: row;
+       
 
         @include desktop{
             gap:2rem;
@@ -140,7 +214,15 @@
     &__description--bold{
         text-align:center;
         font-weight:700;
+        font-size:1.5rem;
+
+        @include tablet{
+            font-size:1.75rem;
+        }
+
+        @include desktop{
         font-size:2rem;
+        }
 
     }
 
@@ -160,7 +242,7 @@
         align-items:center;
 
         @include desktop{
-        gap:0.5rem;
+        gap:0rem;
         padding:1rem;
         width:18rem;
         }
@@ -176,6 +258,20 @@
     border:1px #F6F2EF solid;
     border-radius:8px;
     background-color:#F6F2EF;
+    margin-top:0.25rem;
+    width:18rem;
+    height:15rem;
+    margin-left:0.5rem;
+    margin-right:0.5rem;
+    gap:1rem;
+
+    @include tablet{
+        gap:1.5rem;
+        margin-top:1rem;
+        margin-bottom:2rem;
+        width:40rem;
+        height:20rem;
+    }
 
     @include desktop{
         margin-top:2rem;
@@ -187,13 +283,24 @@
     }
     &__description{
         text-align:center;
+        @include desktop{
+            margin-top:1.25rem;
+        }
     }
 
     &__description--bold{
         margin-top:1rem;
         text-align:center;
         font-weight:700;
+        font-size:1.5rem;
+
+        @include tablet{
+            font-size:1.75rem;
+        }
+
+        @include desktop{
         font-size:2rem;
+        }
         
     }
 
@@ -203,12 +310,29 @@
             align-items:center;
             justify-content: center;
 
+            @include desktop{
+                margin-top:0.25rem;
+            }
+
         }
 
         &__icon{
-            height:3rem;
-            padding-top:0.5rem;
-            padding-right:0.5rem;
+        width:2rem;
+        padding-top:0.5rem;
+        padding-right:0.5rem; 
+
+        @include tablet{
+            height:2rem;
+            padding-top:0.6rem;
+            padding-right:0.5rem;  
+        }
+        @include desktop{
+        
+        height:2.7rem;
+        width:2.5rem;
+        padding-top:0.5rem;
+        padding-right:0.5rem;
+        }
         }
 
         &__paymentbox{
@@ -217,12 +341,12 @@
             align-items:center;
             font-family:'DM Sans';
             font-weight:400;
-            padding:1rem;
+            
             
 
             @include desktop{
                 width:18rem;
-                gap:0.5rem;
+                gap:0.25rem;
             }
         }
 
@@ -237,8 +361,20 @@
     border:none;
     box-shadow:none;
     border-radius:0.5rem;
-    width:15rem;
-    padding:0.5rem;
     margin:auto;
+    width:6rem;
+    padding:0.25rem;
+    margin-top:1rem;
+
+    @include tablet{
+        width:8rem;
+        margin-top:2rem;
+        padding:0.5rem;
+    }
+
+    @include desktop{
+        width:15rem;
+        padding:0.5rem;
+    }
  
 }

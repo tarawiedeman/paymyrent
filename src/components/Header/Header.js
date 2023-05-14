@@ -15,7 +15,7 @@ function Header() {
         <ul className="header__list"> 
         {/* <img src={creditcard} alt="creditcard" className="header__icon--creditcard"></img> */}
           <Link to="payment/">
-          <li className="header__text">My Dashboard</li>
+          <li className="header__text--dashboard">My Dashboard</li>
           </Link>
           {/* <img className="header__icon" src={login} alt="login"></img> */}
           

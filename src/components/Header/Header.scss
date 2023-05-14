@@ -10,7 +10,22 @@
     padding:0.15rem;
     display:flex;
     flex-direction: row;
-    position:relative;
+    position:fixed;
+    top:0rem;
+    gap:20vw;
+    padding-right:10rem;
+
+    @include tablet{
+      gap:39vw;
+      padding-left:1rem;
+      padding-right:20rem;
+    }
+
+    @include desktop{
+      gap: 58vw;
+      padding-left:5rem;
+      padding-right:4rem;
+    }
        
     
     &__logo{
@@ -28,8 +43,7 @@
 
     @include desktop{
     gap:1.5rem;
-    margin-left:73%;
-
+  
     }
     
   }
@@ -38,13 +52,74 @@
         font-weight:600;
         color:$primary-cta-color;
         background-color:$global-color;
-        font-size:1rem;
+        font-size:0.8rem;
         list-style:none;
         border:2px white solid;
         border-radius:8px;
         padding:0.25rem;
         box-shadow:none;
+        padding-left:0.5rem;
+        padding-right:0.5rem;
+        padding-top:0.25rem;
+        padding-bottom:0.25rem;
+        margin-right:1rem;
+
+        @include tablet{
+            font-size:1rem;
+            padding-left:0.5rem;
+            padding-right:0.5rem;
+            padding-top:0.25rem;
+            padding-bottom:0.25rem;
+            margin-right:1rem;
+          
+        }
+
+        @include desktop{
+          font-size:1rem;
+          padding-left:0.5rem;
+          padding-right:0.5rem;
+          padding-top:0.25rem;
+          padding-bottom:0.25rem;
+        }
         
+    }
+  
+  
+    &__text--dashboard{
+        font-weight:600;
+        color:$primary-cta-color;
+        background-color:$global-color;
+        font-size:0.8rem;
+        list-style:none;
+        border:2px white solid;
+        border-radius:8px;
+        padding:0.25rem;
+        box-shadow:none;
+        padding-left:0.5rem;
+        padding-right:0.5rem;
+        padding-top:0.25rem;
+        padding-bottom:0.25rem;
+        margin-right:1rem;
+        width:6.8rem;
+
+        @include tablet{
+          font-size:1rem;
+          padding-left:0.5rem;
+          padding-right:0.5rem;
+          padding-top:0.25rem;
+          padding-bottom:0.25rem;
+          margin-right:1rem;
+          width:8.25rem;
+        }
+
+        @include desktop{
+          font-size:1rem;
+          padding-left:0.5rem;
+          padding-right:0.5rem;
+          padding-top:0.25rem;
+          padding-bottom:0.25rem;
+          width:8.25rem;
+        }
     }
 }
 

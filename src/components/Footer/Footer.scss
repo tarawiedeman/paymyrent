@@ -7,22 +7,38 @@
     color:black;
     font-family:DM Sans;
     font-weight:400;
-    font-size:0.75rem;
+    font-size:0.5rem;
     display:flex;
     flex-direction:row;
     justify-content: space-between;
     position:fixed;
     bottom:0rem;
+    gap:20vw;
+    padding-left:1rem;
+    padding-right:1rem;
+    padding-top:0.25rem;
+    padding-bottom:0rem;
+    height:3.2rem;
+    
+
+    @include tablet{
+        gap:68vw;
+        padding-left:2rem;
+        padding-right:4rem;
+        padding-top:0.25rem;
+        padding-bottom:0rem;
+        height:6rem;
+        font-size:0.75rem;
+    }
 
     @include desktop{
     padding-left:4rem;
     padding-right:4rem;
     padding-top:0.25rem;
     padding-bottom:0rem;
-    gap:75rem;
-    
-   
-
+    gap:72vw;
+    height:6rem;
+    font-size:0.75rem;
     }
 
     &__list{
@@ -32,13 +48,28 @@
         padding-bottom:1rem;
         
 
-       
 
+    @include tablet{
+        display:flex;
+        flex-direction:column;
+        list-style:none;
+        padding-bottom:1rem;
     }
+    @include desktop{
+        display:flex;
+        flex-direction:column;
+        list-style:none;
+        padding-bottom:1rem;
+    }
+        
+        
+    }
+
 
     &__list--item{
         padding:0.25rem;
-        flex-wrap:nowrap;
+        flex-wrap:wrap;
+        
 
         @include desktop{
         width:6rem;
@@ -48,6 +79,8 @@
     &__list--itembold{
         font-weight:600;
         flex-wrap:nowrap;
+        color:$primary-cta-color;
+        width:8.5rem;
 
         @include desktop{
         padding-top:0.5rem;
@@ -67,6 +100,7 @@
         display:flex;
         flex-direction: row;
         gap:3rem;
+
         
     }
     &__container--column{

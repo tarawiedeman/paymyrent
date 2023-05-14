@@ -157,9 +157,9 @@ return (
         </div>
   </div>
   <div className="utildashboard__paymentbox">
-        <h2>Pay Utilities Due</h2>
+        <h2>Utilities Due</h2>
         <div>
-        $150.00
+        $50.00
         </div>
         <button className="button__submit" type="submit" onClick={handleUtilClick}>
           Pay Now
