@@ -14,60 +14,40 @@
        
     
     &__logo{
-        width: 100px;
-        height: 70px;
+        width: 90px;
+        height: 60px;
+        margin-left:1rem;
     }
 
-    &__icon{
-        width:30px;
+  &__list{
+    font-family:'DM Sans';
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items:center;
+
+    @include desktop{
+    gap:1.5rem;
+    margin-left:73%;
+
+    }
+    
+  }
+
+    &__text{
+        font-weight:600;
         color:$primary-cta-color;
-        
-    }
-
-    &__icon--creditcard{
-        width:35px;
-        height:30px;
-        display:flex;
-        align-self:center;
-        padding:0;
-        
-        
-    }
-
-    &__payment{
-        display:flex;
-        flex-direction: column;
-        position:absolute;
-        right:12rem;
-        bottom:0.5rem;
-        text-align:center;
-    }
-
-    &__payment--text{
-        font-weight:600;
+        background-color:$global-color;
         font-size:1rem;
-        color:$global-color;
-        
-    }
-
-    &__login{
-        position:absolute;
-        right:1rem;
-        top:1rem;
-        text-align:center;
-    }
-
-    &__container{
-        display:flex;
-        flex-direction: row;
-    }
-
-    &__login--text{
-        font-weight:600;
-        color:$global-color;
-        font-size:1rem;
+        list-style:none;
+        border:2px white solid;
+        border-radius:8px;
+        padding:0.25rem;
+        box-shadow:none;
         
     }
 }
+
+
 
   

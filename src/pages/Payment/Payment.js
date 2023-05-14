@@ -3,7 +3,9 @@ import axios from 'axios';
 import { useState, useEffect } from "react";
 import { useNavigate, Link } from 'react-router-dom';
 import { useParams } from "react-router-dom";
-
+import utilities from "../../assets/icons/utilities.png";
+import rent from "../../assets/icons/rent.png";
+import profile from "../../assets/icons/profile.png";
 
 function Payment () {
  
@@ -107,36 +109,48 @@ function Payment () {
 
 return (
   <main>
-  <h1 className="welcome">{`${currentTenant.tenant_name} - Payment Dashboard`}</h1>
+  <div className="profile">
+  <img src={profile} alt="profile" className="profile__image"></img>
+  <div className="profile__container">
+  <h1 className="profile__name">{`${currentTenant.tenant_name}`}</h1>
+  <p className="profile__address"> Appleby Apartments, Suite A</p>
+  </div>
+  </div>
   <div className="main">
   <section className="rentdashboard">
     <div className="rentdashboard__container--column">
-      <h2 className="rentdashboard__description--bold">RENT</h2>
+      <div className="rentdashboard__imagecontainer--row">
+    <img className="rentdashboard__icon" src={rent} alt="rent"></img>
+    <h2 className="rentdashboard__description--bold">Rent</h2>
+    </div>
       <div className="rentdashboard__description">
         <h2>Monthly Rental Rate</h2>
         <div>
         {`${currentTenant.amount}`}
         </div>
       </div>
-    <div className="rentdashboard__container--row">
+    {/* <div className="rentdashboard__container--row"> */}
     <form className="rentdashboard__paymentbox" onSubmit={createCheckout}>
         <h2>Make a one-time rent payment</h2>
         <button className="button__submit"type="submit" id="submit-button">
           Pay Now
         </button>
       </form>
-      <div className="rentdashboard__optiontext"> OR </div>
+      {/* <div className="rentdashboard__optiontext"> OR </div>
     <div className="rentdashboard__paymentbox">
       <h2>Set up a recurring rent payment</h2>
       <button className="button__submit" type="submit">Pay Now</button>
     </div>
-    </div>
+    </div> */}
     </div> 
   </section>
 
   <section className="utildashboard">
-  <h2 className="utildashboard__description--bold">UTILITIES</h2>
-  <div className="rentdashboard__description">
+  <div className="utildashboard__rowcontainer">
+    <img className="utildashboard__icon" src={utilities} alt="wrench"></img>
+  <h2 className="utildashboard__description--bold">Utilities</h2>
+  </div>
+  <div className="utildashboard__description">
   <h2>Average Monthly Utilities</h2>
         <div>
         $60

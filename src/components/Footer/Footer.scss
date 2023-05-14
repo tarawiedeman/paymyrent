@@ -3,30 +3,76 @@
 @use "../../styles/partials/variables" as *;
 
 .footer{
-    background-color:$header-color;
-    color:$global-color;
+    background-color:#FAFAFA;    ;
+    color:black;
     font-family:DM Sans;
     font-weight:400;
-    font-size:1rem;
-    position:relative;
+    font-size:0.75rem;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    position:fixed;
+    bottom:0rem;
 
     @include desktop{
-    padding:1rem;
+    padding-left:4rem;
+    padding-right:4rem;
+    padding-top:0.25rem;
+    padding-bottom:0rem;
+    gap:75rem;
+    
+   
 
     }
 
     &__list{
-        list-style:none;
-        text-decoration:underline;
-        padding-bottom:1rem;
-    }
-
-    &__container{
         display:flex;
         flex-direction:column;
-        position:absolute;
-        right:1rem;
-        top:2rem;
+        list-style:none;
+        padding-bottom:1rem;
+        
+
+       
+
+    }
+
+    &__list--item{
+        padding:0.25rem;
+        flex-wrap:nowrap;
+
+        @include desktop{
+        width:6rem;
+        }
+    }
+
+    &__list--itembold{
+        font-weight:600;
+        flex-wrap:nowrap;
+
+        @include desktop{
+        padding-top:0.5rem;
+        width:8rem;
+        }
+    }
+
+    &__inc{
+       display:flex;
+       align-self:flex-end;
+       padding-bottom:2rem;
+    
+       
+    }
+
+    &__container--row{
+        display:flex;
+        flex-direction: row;
+        gap:3rem;
+        
+    }
+    &__container--column{
+        display:flex;
+        flex-direction:column;
+       
         
     }
 
@@ -36,15 +82,14 @@
         @include desktop{
         width: 100px;
         height: 70px;
-        position:absolute;
-        top:1.5rem;
-        right:15rem;
+        margin-right:2rem;
+       
         }
     }
 
     &__support--text{
         font-weight:400;
         font-size:0.25rem;
-        
+       
     }
 }

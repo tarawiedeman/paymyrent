@@ -30,28 +30,75 @@
     margin-top:2rem;
 
 }
-.welcome {
-    text-align:center;
+.profile {
+    display:flex;
+    flex-direction:row;
+    font-family:'DM Sans';
+    margin-left:10rem;
+    margin-top:4rem;
+    
+    &__container{
+        flex-direction:column;
+    }
+    &__name{
 
     @include desktop{
+        
         font-size:32px;
         font-weight:600;
+    }
+    }
+
+    &__address{
+    font-family:'DM Sans';
+
+    @include desktop{
+        font-size:18px;
+        margin-top:1rem;
+    }
+    }
+
+    &__image{
+        margin-top:1rem;
+        margin-right:2rem;
+        width:45px;
+        height:48px;
+        border:1.5px black solid;
+        border-radius:100px;
 
     }
 }
 
 .rentdashboard{
-
-    border:1px black solid;
+    background-color:#F6F2EF;
+    border:1px #F6F2EF solid;
     border-radius:8px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 
     @include desktop{
         margin-top:2rem;
         width:42rem;
         height:22rem;
+        
     }
 
-   
+    &__icon{
+        width:3rem;
+        height:2.75rem;
+        padding-top:0.5rem;
+        padding-right:0.5rem;
+        
+    }
+
+   &__imagecontainer--row{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content: center;
+
+}
 
     &__container--column{
         display:flex;
@@ -69,6 +116,7 @@
         @include desktop{
             gap:2rem;
             margin-top:3rem;
+            margin-left:1rem;
         }
     }
 
@@ -92,7 +140,7 @@
     &__description--bold{
         text-align:center;
         font-weight:700;
-        font-size:1.5rem;
+        font-size:2rem;
 
     }
 
@@ -108,6 +156,8 @@
         display:flex;
         flex-direction: column;
         text-align:center;
+        justify-content: center;
+        align-items:center;
 
         @include desktop{
         gap:0.5rem;
@@ -123,26 +173,43 @@
     display:flex;
     flex-direction: column;
     align-items:center;
-    border:1px black solid;
+    border:1px #F6F2EF solid;
     border-radius:8px;
+    background-color:#F6F2EF;
 
     @include desktop{
         margin-top:2rem;
         margin-bottom:2rem;
         width:42rem;
         height:22rem;
-        gap:1.2rem;
+        gap:1.7rem;
+       
+    }
+    &__description{
+        text-align:center;
     }
 
     &__description--bold{
-        font-weight:700;
-        font-size:1.5rem;
-        text-align:center;
         margin-top:1rem;
+        text-align:center;
+        font-weight:700;
+        font-size:2rem;
         
     }
 
-   
+        &__rowcontainer{
+            display:flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content: center;
+
+        }
+
+        &__icon{
+            height:3rem;
+            padding-top:0.5rem;
+            padding-right:0.5rem;
+        }
 
         &__paymentbox{
             display:flex;

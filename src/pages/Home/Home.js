@@ -1,16 +1,17 @@
 import "./Home.scss";
 
+
 function Home() {
     return (
         <section>
 
             <div className="hero">
-            <h1>Rent - Made Simple</h1>
+            <h1 className="hero__text">Rent<span className="hero__text--italic"> - Made Simple</span></h1>
             </div>
 
             <div className="product">
 
-                <p className="product__description"> <span className="product__description--bold">PayMyRent</span> is an application that allows renters to pay their individual portion of rent by credit card each month.</p>
+                <p className="product__description"> <span className="product__description--bold">PayMyRent</span> allows renters to pay their individual portion of rent by credit card each month.</p>
                 
                 <div className="benefits">
 
