@@ -11,7 +11,7 @@ function Home() {
 
             <div className="product">
 
-                <p className="product__description"> <span className="product__description--bold">PayMyRent</span> allows renters to pay their individual portion of rent by credit card each month.</p>
+                <p className="product__description"> <span className="product__description--bold">PayMyRent</span> allows renters to pay their individual portion of rent & utilities by credit card each month.</p>
                 
                 <div className="benefits">
 

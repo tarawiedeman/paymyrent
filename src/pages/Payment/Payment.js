@@ -11,18 +11,17 @@ function Payment () {
  
   const [user,setUser] = useState(null);
   const [failedAuth,setFailedAuth] = useState(false);
-  const params = useParams();
-  const email = params.tenantemail;
   const [currentTenant, setTenant] = useState(null);
 
   useEffect(() => { 
     const token = localStorage.getItem("token");
-    console.log(token);
+ 
    
 
     if(!token) {
       return setFailedAuth(true);
     }
+   
 
     axios.get('http://localhost:8000/api/users/current',{
       headers: {
@@ -39,7 +38,7 @@ function Payment () {
       });
 
       axios
-      .get(`http://localhost:8000/api/tenants/${email}`,{
+      .get('http://localhost:8000/api/tenants/',{
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -70,7 +69,7 @@ function Payment () {
       )
     }
     
-    if(failedAuth) {
+    if(failedAuth == true) {
       return(
         <section className="nodashboard">
           <p>You must be logged in to see this page.</p>
@@ -88,6 +87,8 @@ function Payment () {
         </section>
       )
     }
+
+
 
   
   function createCheckout(e) {
@@ -113,7 +114,7 @@ return (
   <img src={profile} alt="profile" className="profile__image"></img>
   <div className="profile__container">
   <h1 className="profile__name">{`${currentTenant.tenant_name}`}</h1>
-  <p className="profile__address"> Appleby Apartments, Suite A</p>
+  <p className="profile__address"> {`${currentTenant.property_name}, ${currentTenant.suite_name}`}</p>
   </div>
   </div>
   <div className="main">
@@ -129,19 +130,14 @@ return (
         {`${currentTenant.amount}`}
         </div>
       </div>
-    {/* <div className="rentdashboard__container--row"> */}
+   
     <form className="rentdashboard__paymentbox" onSubmit={createCheckout}>
         <h2>Make a one-time rent payment</h2>
         <button className="button__submit"type="submit" id="submit-button">
           Pay Now
         </button>
       </form>
-      {/* <div className="rentdashboard__optiontext"> OR </div>
-    <div className="rentdashboard__paymentbox">
-      <h2>Set up a recurring rent payment</h2>
-      <button className="button__submit" type="submit">Pay Now</button>
-    </div>
-    </div> */}
+    
     </div> 
   </section>
 
@@ -159,7 +155,7 @@ return (
   <div className="utildashboard__paymentbox">
         <h2>Utilities Due</h2>
         <div>
-        $50.00
+        {`${currentTenant.amount}`}
         </div>
         <button className="button__submit" type="submit" onClick={handleUtilClick}>
           Pay Now
@@ -168,6 +164,7 @@ return (
 
 
   </section>
+  
   </div>
   </main>
 );

@@ -7,58 +7,55 @@
     color:black;
     font-family:DM Sans;
     font-weight:400;
-    font-size:0.5rem;
+    font-size:0.75rem;
     display:flex;
     flex-direction:row;
     justify-content: space-between;
-    position:fixed;
-    bottom:0rem;
-    gap:20vw;
+    position:static;
+    width:100%;
+    height:12rem;
     padding-left:1rem;
     padding-right:1rem;
-    padding-top:0.25rem;
-    padding-bottom:0rem;
-    height:3.2rem;
+    padding-top:0.5rem;
+    padding-bottom:0.5rem;
+    
     
 
     @include tablet{
-        gap:68vw;
+        
         padding-left:2rem;
         padding-right:4rem;
-        padding-top:0.25rem;
-        padding-bottom:0rem;
-        height:6rem;
-        font-size:0.75rem;
+        padding-top:2rem;
+        padding-bottom:2rem;
+        height:17rem;
+        font-size:1rem;
     }
 
     @include desktop{
     padding-left:4rem;
     padding-right:4rem;
-    padding-top:0.25rem;
-    padding-bottom:0rem;
-    gap:72vw;
-    height:6rem;
-    font-size:0.75rem;
+    padding-top:3rem;
+    padding-bottom:3rem;
+    height:15rem;
+    font-size:1rem;
     }
 
     &__list{
         display:flex;
         flex-direction:column;
+        justify-content: center;
+        align-items:center;
         list-style:none;
         padding-bottom:1rem;
         
 
 
     @include tablet{
-        display:flex;
-        flex-direction:column;
-        list-style:none;
+        
         padding-bottom:1rem;
     }
     @include desktop{
-        display:flex;
-        flex-direction:column;
-        list-style:none;
+        
         padding-bottom:1rem;
     }
         
@@ -72,7 +69,7 @@
         
 
         @include desktop{
-        width:6rem;
+        
         }
     }
 
@@ -80,11 +77,12 @@
         font-weight:600;
         flex-wrap:nowrap;
         color:$primary-cta-color;
-        width:8.5rem;
+        
+
 
         @include desktop{
         padding-top:0.5rem;
-        width:8rem;
+        
         }
     }
 

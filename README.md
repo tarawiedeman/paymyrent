@@ -1,6 +1,30 @@
-# Getting Started with Create React App
+Welcome to PayMyRent! This application allows renters to pay their individual portion of rent and utilities each month using credit card.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Tech stack used: 
+-React, SaSS, Axios (front-end)
+-Node, Express, Knex (back-end)
+
+Usage instructions: 
+To test out this application clone the paymyrent and paymyrentapi repositories first.
+
+In the client repo on your local device, run npm i to ensure all the necessary packages are installed. Do to the same from the server folder. 
+
+In the server folder you'll need to run the migration to create the property management table and then seed it. Use npx knex migrate:latest and npm seed:run. 
+
+There is no public site for this application. 
+
+API references
+I used Stripe's API to allow the PayMyRent application to facilitate transactions. The npm package is installed by npm install stripe --save https://www.npmjs.com/package/stripe. 
+
+This API allowed me to create a Stripe checkout session and redirect the user to a stripe checkoutpage. 
+
+Lessons learned & next steps
+
+Next I would try to build a utilities table in my database (again) so I could bring in utilities data per tenant dynamically. I did actually do this successfully but when I dropped the table to adjust a column name, the entire knex migration process was corrupted and I didn't have time to drop my entire database and start over. 
+
+I would also try to replace stripe with another payment provider that was better suited to the needs of this product. Stripe is built for retail businesses with products that have set prices. Ideally I want to have tenants set up recurring rent payments via credit card; the only option that could support this was Stripe Subscriptions, but this would mean that any tenant could see multiple suscription options / rental prices for other suites and this is not what a landlord would want. In short, in future iterations I'd switch to a payment provider that could support the admin creating subscription packages and assigning them to specific users only, and then having the user/customer subscibe to their package. 
+
+
 
 ## Available Scripts
 
@@ -14,57 +38,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### `node server.js`
+Runs the app in the development mode. This will open http://localhost:8000 in your browser and get the server online. 
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

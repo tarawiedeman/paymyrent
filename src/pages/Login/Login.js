@@ -1,5 +1,4 @@
 import "./Login.scss";
-import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate, Link } from 'react-router-dom';
@@ -22,8 +21,7 @@ function Login() {
             setError('');
             const user = jwt(response.data.token);
             console.log(user);
-            const {email}=user;
-            navigate(`/payment/${email}`)
+            navigate('/payment')
         })
         .catch((error) => {
             setError(error.response.data);

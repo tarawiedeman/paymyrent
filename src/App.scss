@@ -25,7 +25,15 @@ a:active {
   text-decoration:none;
 }
 h2 {
+  font-size:1rem;
+
+  @include tablet{
+    font-size:1rem;
+  }
+
+  @include desktop{
   font-size: 1.25rem;
+}
 }
 h3 {
   font-size: 1rem;
@@ -40,4 +48,5 @@ textarea {
   width: 75%;
   margin: 0 auto;
   padding-bottom: 2rem;
+  
 }

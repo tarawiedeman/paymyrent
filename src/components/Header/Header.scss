@@ -12,20 +12,8 @@
     flex-direction: row;
     position:fixed;
     top:0rem;
-    gap:20vw;
-    padding-right:10rem;
-
-    @include tablet{
-      gap:39vw;
-      padding-left:1rem;
-      padding-right:20rem;
-    }
-
-    @include desktop{
-      gap: 58vw;
-      padding-left:5rem;
-      padding-right:4rem;
-    }
+    width:100%;
+    
        
     
     &__logo{
@@ -40,15 +28,14 @@
     flex-direction:row;
     justify-content: space-between;
     align-items:center;
-
-    @include desktop{
-    gap:1.5rem;
-  
-    }
+    position:absolute;
+    right:1rem;
+    top:1rem;
     
   }
 
     &__text{
+        font-family:'DM Sans';
         font-weight:600;
         color:$primary-cta-color;
         background-color:$global-color;

@@ -21,7 +21,7 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="logout" element={<Logout />} />
         <Route path="createaccount" element={<CreateAccount />} />
-        <Route path="payment/:tenantemail" element={<Payment />} />
+        <Route path="payment" element={<Payment />} />
       </Routes>
       <Footer />
     </BrowserRouter>
