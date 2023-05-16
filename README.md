@@ -1,24 +1,34 @@
+-add proper code blocks via ``
+-add headers 
+-add it to server repo as well 
+-include a link to front end and back end repo to github
+-usage instrutctions last 
+
 Welcome to PayMyRent! This application allows renters to pay their individual portion of rent and utilities each month using credit card.
 
-Tech stack used: 
+##Tech stack used: 
 -React, SaSS, Axios (front-end)
 -Node, Express, Knex (back-end)
 
-Usage instructions: 
+##Usage instructions: 
 To test out this application clone the paymyrent and paymyrentapi repositories first.
 
-In the client repo on your local device, run npm i to ensure all the necessary packages are installed. Do to the same from the server folder. 
+Link to client repo and server repo 
 
-In the server folder you'll need to run the migration to create the property management table and then seed it. Use npx knex migrate:latest and npm seed:run. 
+In the client repo on your local device, run `npm i` to ensure all the necessary packages are installed. Do to the same from the server folder. 
+
+In the server folder you'll need to run the migration to create the property management database.You can use the commaand CREATE DATABASE property_management. Then create tables and seed them. Use `npm run migrate` and `npm run seed`. 
 
 There is no public site for this application. 
 
-API references
+ADD serve and client site 
+
+##API references
 I used Stripe's API to allow the PayMyRent application to facilitate transactions. The npm package is installed by npm install stripe --save https://www.npmjs.com/package/stripe. 
 
 This API allowed me to create a Stripe checkout session and redirect the user to a stripe checkoutpage. 
 
-Lessons learned & next steps
+##Lessons learned & next steps
 
 Next I would try to build a utilities table in my database (again) so I could bring in utilities data per tenant dynamically. I did actually do this successfully but when I dropped the table to adjust a column name, the entire knex migration process was corrupted and I didn't have time to drop my entire database and start over. 
 

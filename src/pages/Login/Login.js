@@ -12,6 +12,14 @@ function Login() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
+        if (!e.target.email.value) {
+            window.alert ("please enter an email")
+        }
+
+        if (!e.target.password.value) {
+            window.alert("please enter a password")
+        }
+
         axios.post("http://localhost:8000/api/users/login",{
             email:e.target.email.value,
             password:e.target.password.value

@@ -7,10 +7,12 @@ import Login from "./pages/Login/Login";
 import Logout from "./pages/Logout/Logout";
 import CreateAccount from "./pages/CreateAccount/CreateAccount";
 import Payment from "./pages/Payment/Payment";
+import Success from "./pages/Success/Success";
+import Failure from "./pages/Failure/Failure";
 
 
 
-// const baseUrl = "http://localhost:5000";
+
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
         <Route path="logout" element={<Logout />} />
         <Route path="createaccount" element={<CreateAccount />} />
         <Route path="payment" element={<Payment />} />
+        <Route path="success" element={<Success />} />
+        <Route path="failure" element={<Failure />} />
       </Routes>
       <Footer />
     </BrowserRouter>

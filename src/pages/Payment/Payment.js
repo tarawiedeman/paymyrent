@@ -61,9 +61,9 @@ function Payment () {
 
       return(
         <section className="nodashboard">
-          <p>You are not authorized to see this page.</p>
+          <p>You are not authorized to see this page. Please login.</p>
           <p>
-            <Link to="/">Back</Link>
+            <Link to="/login">Login</Link>
           </p>
         </section>
       )
@@ -155,7 +155,7 @@ return (
   <div className="utildashboard__paymentbox">
         <h2>Utilities Due</h2>
         <div>
-        {`${currentTenant.amount}`}
+        $40
         </div>
         <button className="button__submit" type="submit" onClick={handleUtilClick}>
           Pay Now
