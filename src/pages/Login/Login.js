@@ -12,13 +12,10 @@ function Login() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (!e.target.email.value) {
-            window.alert ("please enter an email")
-        }
-
-        if (!e.target.password.value) {
-            window.alert("please enter a password")
-        }
+        if (!e.target.email.value === "" || !e.target.password.value === "") {
+            window.alert('Please enter all required fields');
+            return false;
+          }
 
         axios.post("http://localhost:8000/api/users/login",{
             email:e.target.email.value,
