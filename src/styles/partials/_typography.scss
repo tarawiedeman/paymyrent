@@ -1,39 +1,15 @@
 @font-face {
-    font-family: Titillium Web;
-    src: url("../../assets/fonts/Titillium_Web/TitilliumWeb-SemiBold.ttf");
-    font-style: normal;
-    font-display: swap;
-    font-weight: 600;
-  }
-  
-  @font-face {
-    font-family: Titillium Web;
-    src: url("../../assets/fonts/Titillium_Web/TitilliumWeb-Regular.ttf");
-    font-style: normal;
-    font-display: swap;
-    font-weight: 400;
-  }
+  font-family: DM Sans;
+  src: url("../../assets/fonts/DM_Sans/DMSans-Regular.ttf");
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+}
 
-  @font-face{
-    font-family: DM Sans;
-    src:url("../../assets/fonts/DM_Sans/DMSans-Regular.ttf");
-    font-style: normal;
-    font-display: swap;
-    font-weight: 400;
-  }
-
-  @font-face{
-    font-family: DM Sans;
-    src:url("../../assets/fonts/DM_Sans/DMSans-Medium.ttf");
-    font-style: normal;
-    font-display: swap;
-    font-weight: 600;
-  }
-
-  @font-face {
-    font-family: Material Icons;
-    font-display:swap;
-    font-style: normal;
-    font-weight: 400;
-    src: url("../../assets/fonts/MaterialIcons-Regular.ttf");
-  }
+@font-face {
+  font-family: DM Sans;
+  src: url("../../assets/fonts/DM_Sans/DMSans-Medium.ttf");
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+}

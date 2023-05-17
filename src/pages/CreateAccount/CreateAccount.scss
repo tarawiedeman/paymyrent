@@ -2,90 +2,81 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 
-.newaccount{
-    display:flex;
+.newaccount {
+  display: flex;
+  flex-direction: column;
+  font-family: "DM Sans";
+  width: 18rem;
+  margin: auto;
+  padding: 1rem;
+  margin-top: 15%;
+  margin-bottom: 5%;
+
+  @include tablet {
+    padding: 1rem;
+    margin-top: 10%;
+    margin-bottom: 5%;
+  }
+
+  &__form {
+    display: flex;
     flex-direction: column;
-    font-family:'DM Sans';
-    width:18rem;
-    margin:auto;
-    padding:1rem;
-    margin-top:15%;
-    margin-bottom:5%;
-    
-    @include tablet{
-        padding:1rem;
-        margin-top:10%;
-        margin-bottom:5%;
+  }
+
+  &__form--label {
+    font-weight: 400;
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+  }
+
+  &__form--input {
+    color: black;
+    border: 1.5px black solid;
+    border-radius: 4px;
+  }
+
+  &__header {
+    font-weight: 600;
+    text-align: center;
+    margin: 1rem;
+
+    @include tablet {
+      font-size: 1.25rem;
     }
+  }
 
-    &__form{
-    display:flex;
-    flex-direction: column;  
+  &__subheader {
+    font-weight: 600;
+    text-align: center;
+    margin: 1rem;
+
+    @include tablet {
+      font-size: 1rem;
     }
+  }
 
-    &__form--label{
+  &__form--button {
+    background-color: $primary-cta-color;
+    color: $global-color;
+    font-family: "DM Sans";
+    font-weight: 600;
+    font-size: 1.25rem;
+    border: none;
+    box-shadow: none;
+    border-radius: 0.5rem;
+    width: 10rem;
+    padding: 0.25rem;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 
-        font-weight:400;
-        font-size:1rem;
-        padding-bottom:0.5rem;
-        padding-top:0.5rem;
-
+    @include tablet {
+      width: 12rem;
+      padding: 0.25rem;
+      margin: auto;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
     }
-
-    &__form--input{
-        color:black;
-        border:1.5px black solid;
-        border-radius: 4px;
-
-    }
-
-    &__header{
-        font-weight:600;
-        text-align:center;
-        margin:1rem;
-
-        @include tablet{
-        font-size:1.25rem;
-        }
-    }
-
-    &__subheader{
-        font-weight:600;
-        text-align:center;
-        margin:1rem;
-
-        @include tablet{
-        font-size:1rem;
-        }
-    }
-
-    &__form--button{
-        background-color: $primary-cta-color;
-        color:$global-color;
-        font-family:'DM Sans';
-        font-weight:600;
-        font-size:1.25rem;
-        border:none;
-        box-shadow:none;
-        border-radius:0.5rem;
-        width:10rem;
-        padding:0.25rem;
-        margin:auto;
-        margin-top:1rem;
-        margin-bottom:1rem;
-
-
-
-        
-
-        @include tablet{
-        width:12rem;
-        padding:0.25rem;
-        margin:auto;
-        margin-top:2rem;
-        margin-bottom:2rem;
-        }
-
-    }
-
+  }
 }

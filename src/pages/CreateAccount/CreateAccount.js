@@ -3,21 +3,25 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
 
-
 function CreateAccount() {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    let first_name=e.target.firstname.value;
-    let last_name=e.target.lastname.value;
-    let name = first_name.concat(" ",last_name);
+
+    let first_name = e.target.firstname.value;
+    let last_name = e.target.lastname.value;
+    let name = first_name.concat(" ", last_name);
     console.log(name);
 
-    if (!e.target.firstname.value === "" || !e.target.lastname.value === "" || !e.target.email.value === "" || !e.target.password.value === "") {
-      window.alert('Please enter all required fields');
+    if (
+      !e.target.firstname.value === "" ||
+      !e.target.lastname.value === "" ||
+      !e.target.email.value === "" ||
+      !e.target.password.value === ""
+    ) {
+      window.alert("Please enter all required fields");
       return false;
     }
 
@@ -25,9 +29,8 @@ function CreateAccount() {
       .post("http://localhost:8000/api/users/register", {
         email: e.target.email.value,
         password: e.target.password.value,
-        name:name,
+        name: name,
       })
-
 
       .then(() => {
         setSuccess(true);

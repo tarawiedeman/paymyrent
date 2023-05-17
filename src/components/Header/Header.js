@@ -7,9 +7,6 @@ import { useNavigate } from "react-router-dom";
 function Header() {
   const [isLoggedIn, setLogin] = useState("false");
   const navigate = useNavigate();
-  //login button clicked
-  //is there a valid token? yes - set state to isLoggedIn and navigate to logout page
-  //is there a valid token? no - set state to isLoggedOut and navigate to login page
 
   function LogHandler() {
     const token = localStorage.getItem("token");

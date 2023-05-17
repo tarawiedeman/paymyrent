@@ -2,7 +2,6 @@
 
 // media queries
 
-// for having better header responsive
 @mixin mobile {
   @media screen and (max-width: $mobile-breakpoint) {
     @content;
