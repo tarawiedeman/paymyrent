@@ -1,0 +1,80 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.logout {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: "DM Sans";
+  text-align: center;
+  margin-top: 20%;
+  margin-bottom: 20%;
+  margin-left: 3rem;
+  margin-right: 3rem;
+
+  @include tablet {
+    text-align: center;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    margin-left: 15rem;
+    margin-right: 15rem;
+  }
+
+  @include desktop {
+    margin-top: 12%;
+    margin-bottom: 13%;
+    margin-left: 30rem;
+    margin-right: 30rem;
+  }
+
+  &__description {
+    font-weight: 400;
+    margin: 1rem;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+
+    @include tablet {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__description--bold {
+    font-weight: 600;
+    margin-top: 5rem;
+
+    @include tablet {
+      font-size: 1.5rem;
+      margin-top: 0rem;
+    }
+  }
+}
+
+.button__logout {
+  background-color: $primary-cta-color;
+  color: $global-color;
+  font-family: "DM Sans";
+  font-weight: 600;
+  font-size: 1.25rem;
+  border: none;
+  box-shadow: none;
+  border-radius: 0.5rem;
+  width: 6rem;
+  margin: auto;
+
+  @include tablet {
+    width: 8rem;
+    padding: 0.25rem;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  @include desktop {
+    width: 6rem;
+    padding: 0.25rem;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}

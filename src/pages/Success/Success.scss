@@ -1,0 +1,28 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.success {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "DM Sans";
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  gap: 1rem;
+  padding: 10%;
+  margin-top: 45%;
+  margin-bottom: 35%;
+
+  @include tablet {
+    padding: 10%;
+    margin-top: 15%;
+    margin-bottom: 15%;
+  }
+
+  &__dashboard {
+    color: $primary-cta-color !important;
+    font-weight: 700;
+  }
+}

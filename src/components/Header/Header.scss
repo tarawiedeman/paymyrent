@@ -2,38 +2,102 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 
+.header {
+  background-color: $header-color;
+  font-family: "DM Sans";
+  padding: 0.15rem;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 0rem;
+  width: 100%;
 
-.header{
+  &__logo {
+    width: 90px;
+    height: 60px;
+    margin-left: 1rem;
+  }
 
-    background-color:$header-color;
-    font-family:'DM Sans';
-    padding:0.25rem;
-    display:flex;
+  &__list {
+    font-family: "DM Sans";
+    display: flex;
     flex-direction: row;
-    position:relative;
-       
-    
-    &__logo{
-        width: 100px;
-        height: 75px;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+
+  &__text {
+    font-family: "DM Sans";
+    font-weight: 600;
+    color: $primary-cta-color;
+    background-color: $global-color;
+    font-size: 0.8rem;
+    list-style: none;
+    border: 2px white solid;
+    border-radius: 8px;
+    padding: 0.25rem;
+    box-shadow: none;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    margin-right: 1rem;
+
+    @include tablet {
+      font-size: 1rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+      margin-right: 1rem;
     }
 
-    &__icon{
-        width:30px;
-        
+    @include desktop {
+      font-size: 1rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+    }
+  }
+
+  &__text--dashboard {
+    font-weight: 600;
+    color: $primary-cta-color;
+    background-color: $global-color;
+    font-size: 0.8rem;
+    list-style: none;
+    border: 2px white solid;
+    border-radius: 8px;
+    padding: 0.25rem;
+    box-shadow: none;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    margin-right: 1rem;
+    width: 6.8rem;
+
+    @include tablet {
+      font-size: 1rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+      margin-right: 1rem;
+      width: 8.25rem;
     }
 
-    &__login{
-        position:absolute;
-        right:1rem;
-        top:1rem;
-        text-align:center;
+    @include desktop {
+      font-size: 1rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+      width: 8.25rem;
     }
-
-    &__login--text{
-        font-weight:600;
-        color:$global-color;
-        font-size:1rem;
-        
-    }
+  }
 }
